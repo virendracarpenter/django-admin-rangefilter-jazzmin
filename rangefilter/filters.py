@@ -86,11 +86,12 @@ class DateRangeFilter(admin.filters.FieldListFilter):
         )
         self.request = request
         self.model_admin = model_admin
-        self.form = self.get_form(request)
 
         custom_title = self._get_custom_title(request, model_admin, field_path)
         if custom_title:
             self.title = custom_title
+
+        self.form = self.get_form(request)
 
     @staticmethod
     def get_timezone(_request):
@@ -303,11 +304,12 @@ class NumericRangeFilter(admin.filters.FieldListFilter):
         )
         self.request = request
         self.model_admin = model_admin
-        self.form = self.get_form(request)
 
         custom_title = self._get_custom_title(request, model_admin, field_path)
         if custom_title:
             self.title = custom_title
+
+        self.form = self.get_form(request)
 
     def get_template(self):
         return "rangefilter/numeric_filter.html"
