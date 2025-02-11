@@ -88,3 +88,5 @@ The setting `ADMIN_RANGEFILTER_NONCE_ENABLED` controls this behavior.
         'csp',
         ...
     )
+
+All Credits goes to the original creators of the package.
